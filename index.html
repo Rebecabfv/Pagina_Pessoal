@@ -9,28 +9,31 @@
 </head>
 <body>
     <script src="script.js"></script>
-    <header> 
-        <button type="button" onclick="directHome()" class="button_home">Home</button>
-        <button type="button" onclick="directBlog()" class="button_blog">Blog</button>
-        <h1 id="title">Hi, I'm Rebeca Baptista Fonseca Viana</h1>
-       
-        <img src="image/Rebeca.jpeg" alt="Foto rosto Rebeca" class="photo">
+    <header class="flex-container row"> 
+        <button type="button" onclick="directHome()" class="button_home flex-item">Home</button>
+        <button type="button" onclick="directBlog()" class="button_blog flex-item row-reverse">Blog</button>  
     </header>
     <section>
-        <header>
+        <img src="image/Rebeca.jpeg" alt="Foto rosto Rebeca" class="photo">
+        <header> 
+            <h1 id="title">Hi, world! <br>I'm Rebeca Baptista Fonseca Viana</h1>
+        </header>
+        <header> 
             <h2 class="subtitle">About me</h2>
         </header>
     </section>
     <section>
-        <p>
-            function dev(name, age, work) { </br>
-                this.name = name; </br>
-                this.age = age; </br>
-                this.studying = studying; </br>
-            } </br>
-            let rebecaBaptista = new dev('Rebeca Baptista', 23, 'Programming language'); </br>
-            console.log(rebecaBaptista); </br>
-        </p>
+        <pre>
+          <p class="about">        function dev(name, age, work) { </br>
+            this.name = name; </br>
+            this.age = age; </br>
+            this.studying = studying; </br>
+        } </br>
+        let rebecaBaptista = new dev('Rebeca Baptista', 23, 'Programming language'); </br>
+        console.log(rebecaBaptista); </br>
+        </p>  
+        </pre>
+        
     </section>
 
     <article class="post">
@@ -43,13 +46,13 @@
             <img src="image/rodape.jpg" alt="Editor de texto mostrando códigos HTML" class="image">
             <p>
                 Sou uma profissional amante de desafios e com uma vontade imensa de crescimento. Tenho facilidade de aprender e amo ensinar e compartilhar saberes. Gosto de trabalhar em equipe e tenho facilidade em lidar com outras pessoas. Sou proativa, responsável e flexível a novas mudanças. Meu desejo é facilitar a vida das pessoas através da tecnologia e trazer acessibilidade a todos. A programação brotou em mim um desejo imensurável de estudar e dedicar cada vez mais a essa imensidão de saberes.
-
+            </br></br>
                 Para conhecer um pouco sobre minha vivência e minha carreira como profissional de Educação Física, acesse meu <a href="http://lattes.cnpq.br/1568458516731271" target="_blank">Currículo Lattes</a>.
             </p>
         </header>
     </article>
     <footer>
-        <h4>Contatos:</h4>
+        <h4 class="post_title">Contatos:</h4>
         <ul class="contact_list">
             <li class="li_gmail"> 
                 <a href="mailto:re.bfviana@gmail.com" target="_blank">Email</a>

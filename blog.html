@@ -8,47 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    <header> 
-        <button type="button" onclick="directHome()" class="button_home">Home</button>
-        <button type="button" onclick="directBlog()" class="button_blog">Blog</button>
-        <h1 id="title">Rebeca Baptista Fonseca Viana</h1>
-       
-        <img src="/Rebeca.jpeg" alt="Foto rosto Rebeca" class="photo">
-    </header>
-    <section>
-        <header>
-            <h2 class="subtitle">Posts</h2>
-        </header>
-    </section>
-    <article class="post">
-        <header>
-            <p>
-                <h3 class="post_title">Em transição de carreira..</h3>
-                </br>
-                Sou formada em Educação Física e estudante do curso de Sistemas de Informação. Estou em busca de novos conhecimentos e aprendizados. Atualmente estou me aventurando nos estudos em desenvolvimento web e possuo conhecimentos básicos em Git e GitHub.
-            </p> 
-            <img src="/rodape.jpg" alt="Editor de texto mostrando códigos HTML" class="image">
-            <p>
-                Sou uma profissional amante de desafios e com uma vontade imensa de crescimento. Tenho facilidade de aprender e amo ensinar e compartilhar saberes. Gosto de trabalhar em equipe e tenho facilidade em lidar com outras pessoas. Sou proativa, responsável e flexível a novas mudanças. Meu desejo é facilitar a vida das pessoas através da tecnologia e trazer acessibilidade a todos. A programação brotou em mim um desejo imensurável de estudar e dedicar cada vez mais a essa imensidão de saberes.
 
-                Para conhecer um pouco sobre minha vivência e minha carreira como profissional de Educação Física, acesse meu <a href="http://lattes.cnpq.br/1568458516731271" target="_blank">Currículo Lattes</a>.
-            </p>
-        </header>
-    </article>
+
+    <header class="flex-container row"> 
+        <button type="button" onclick="directHome()" class="button_home flex-item">Home</button>
+        <button type="button" onclick="directBlog()" class="button_blog flex-item row-reverse">Blog</button>  
+    </header>
+
+    <header> 
+        <h1 id="title">Vamos avaliar sua saúde?</h1>
+    </header>  
+    
+    <input id="peso" name="peso" placeholder="Informe seu peso (kg)" />
+    <input id="altura"  name="altura" placeholder="Informe sua altura (cm)"/>
+    <button id="buttonImc" type="button">Calcular IMC</button>
+
     <footer>
-        <h4>Contatos:</h4>
+        <h4 class="post_title">Contatos:</h4>
         <ul class="contact_list">
-            <li> 
+            <li class="li_gmail"> 
                 <a href="mailto:re.bfviana@gmail.com" target="_blank">Email</a>
             </li>
-            <li>
+            <li class="li_linkedin">
                 <a href="https://www.linkedin.com/in/rebeca-baptista-138496221/" target="_blank">LinkedIn</a>
             </li>
-            <li>
+            <li class="li_github">
                 <a href="https://github.com/Rebecabfv" target="_blank">GitHub</a>
             </li>
         </ul>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="calculaImc.js"></script>
 </body>
 </html>
