@@ -9,19 +9,57 @@
 </head>
 <body>
 
-
     <header class="flex-container row"> 
         <button type="button" onclick="directHome()" class="button_home flex-item">Home</button>
         <button type="button" onclick="directBlog()" class="button_blog flex-item row-reverse">Blog</button>  
     </header>
 
-    <header> 
-        <h1 id="title">Vamos avaliar sua saúde?</h1>
-    </header>  
+    <section>
+        <header> 
+        <h2 id="title">Atividade Física e Saúde</h2>
+        </header>  
+        
+        <section class="post">
+            <h3 class="subtitle">Calcular Índice de Massa Corporal (IMC)</h3>
+            <input id="peso" name="peso" placeholder="Informe seu peso (kg)" />
+            <input id="altura"  name="altura" placeholder="Informe sua altura (cm)"/>
+            <button id="buttonImc" type="button">Calcular IMC</button>
+        </section>
+
+        <br>
+
+        <section class="post">
+            <h3 class="subtitle">Calcular Pace</h3>
+            <label class="post_title">Digite a distância percorrida:</label>
+            <br>
+            <input id="km" type="number" name="km" placeholder="Km" />
+            <input id="metros" type="number" name="metros" placeholder="Metros " />
+            <br><br>
+            <label class="post_title">Digite o tempo:</label>
+            <br>
+            <input id="horas" type="number" name="tempo" placeholder="Horas" />
+            <input id="minutos" type="number" name="tempo" placeholder="Minutos" />
+            <input id="segundos" type="number" name="tempo" placeholder="Segundos" />
+            <br><br>
+            <button id="buttonPace">CALCULAR PACE</button>
+        </section>
+    </section>
     
-    <input id="peso" name="peso" placeholder="Informe seu peso (kg)" />
-    <input id="altura"  name="altura" placeholder="Informe sua altura (cm)"/>
-    <button id="buttonImc" type="button">Calcular IMC</button>
+    <section>
+        <h2 id="title">Jogos</h2>
+        
+        <section class="post">
+            <h4 class="subtitle">Acerte o alvo</h4>
+            <canvas id="canvasAlvo" width="500" height="300"></canvas>
+        </section>
+        
+        <section class="post">
+            <h4 class="subtitle">Quadro de pintura</h4>
+            <h5 class="post_title">Selecione qual cor você deseja pintar</h5>
+            <canvas id="canvasPintura" width="600" height="400"></canvas> 
+        </section>
+   
+    </section>
 
     <footer>
         <h4 class="post_title">Contatos:</h4>
@@ -40,5 +78,8 @@
 
     <script src="script.js"></script>
     <script src="calculaImc.js"></script>
+    <script src="jogoAlvo.js"></script>
+    <script src="jogoPintura.js"></script>
+    <script src="calcularPace.js"></script>
 </body>
 </html>
