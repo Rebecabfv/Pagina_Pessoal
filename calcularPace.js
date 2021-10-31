@@ -4,6 +4,8 @@ horas.focus();
 segundos.focus();
 minutos.focus();
 
+var visibilidadePace = true; //Variável que vai manipular o botão Exibir
+document.getElementById("divPace").style.display = "none";
 
 function calcularPace () {
     var kmCalc = parseInt (document.querySelector ("#km").value);
@@ -41,9 +43,9 @@ function calcularPace () {
 
     if ((paceFloat - paceInt) !== 0 ){
         var segundosCalc = parseInt (60 * (paceFloat - paceInt));
-        alert ("Seu pace médio deve ser: " + paceInt + " min " + segundosCalc + " seg");
+        document.getElementsByClassName("resultadoPace")[0].innerHTML  = "Pace médio: " + paceInt + " min " + segundosCalc + " seg";
     } else {
-        alert ("Seu pace médio deve ser:" + paceInt + " min " );
+        document.getElementsByClassName("resultadoPace")[0].innerHTML  = "Pace médio: " + paceInt + " min ";
     }
 
     //Melhorando a usabilidade do usuário
@@ -57,6 +59,11 @@ function calcularPace () {
     segundos.focus();
     minutos.value = "";
     minutos.focus();
+
+    if (visibilidadePace) {//Se a variável visibilidade for igual a true, então...
+        document.getElementById("divPace").style.display = "block";//Exibimos a div
+        visibilidadePace = false;//alteramos o valor da variável para falso.
+    }
     
 }
 
